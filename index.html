@@ -18,7 +18,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
             position: relative;
         }
 
@@ -375,6 +376,45 @@
 
         .hidden {
             display: none !important;
+        }
+
+        /* ===== 移动端适配 ===== */
+        @media (max-width: 480px) {
+            .card {
+                padding: 24px 18px;
+                border-radius: 24px;
+                width: 94%;
+                max-height: 92vh;
+                overflow-y: auto;
+            }
+            .dog-icon {
+                font-size: 48px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .subtitle {
+                font-size: 12px;
+            }
+            .certificate {
+                padding: 18px 14px;
+            }
+            .cert-title {
+                font-size: 18px;
+            }
+            .cert-body {
+                font-size: 13px;
+            }
+            .cert-body .label {
+                width: 85px;
+            }
+            .btn {
+                padding: 10px 22px;
+                font-size: 14px;
+            }
+            .loading-text {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
