@@ -11,16 +11,20 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+            overflow: auto;
+        }
         body {
             font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
             background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1);
-            min-height: 100vh;
+            min-height: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            overflow-y: auto;
-            overflow-x: hidden;
+            align-items: flex-start;
+            padding: 24px 0;
             position: relative;
+            -webkit-overflow-scrolling: touch;
         }
 
         /* ===== 浮动爱心 ===== */
@@ -384,8 +388,10 @@
                 padding: 24px 18px;
                 border-radius: 24px;
                 width: 94%;
-                max-height: 92vh;
-                overflow-y: auto;
+                overflow: visible;
+            }
+            body {
+                padding: 12px 0;
             }
             .dog-icon {
                 font-size: 48px;
